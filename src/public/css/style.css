@@ -1,83 +1,133 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Estilo para la barra de nav */
-nav {
+/* Estilo del header */
+header {
     background-color: #333;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-nav ul li a {
     color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-family:Arial, Helvetica, sans-serif;
-    padding: 10px 15px;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-}
-
-/* Estilo para body */
-body{
-    font-size: 22px;
-    background-color: #fff;
-    color: #555;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.featured-hotels{
+    padding: 20px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 50px  ;
-}
-
-.hotel {
-    flex: 0 1 30%;
-    text-align: center;
-}
-
-.hotel img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.hotel a {
-    color:#555;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+  }
+  
+  .logo img {
+    max-height: 80px; /* Tamaño del logo */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    border: 2px solid #fff; 
+    border-radius: 15px; /* Hace los bordes mas redondeados */
+    outline: none;
+    font-size: 15px;
+    color: #333; /* Cambia el color del texto */
+  }
+  
+  .btn {
+    background-color: #4cafa0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Hace los bordes mas redondeados */
+    cursor: pointer;
     text-decoration: none;
-    font-size: 18px;
-    font-family:Arial, Helvetica, sans-serif;
-    display: block;
-}
-
-.footer {
+    margin-left: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Agrega transicion */
+  }
+  
+  .btn:hover {
+    background-color: #4cafa0;
+  }
+  
+  /* Estilo del nav */
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Estilo de los alojamientos */
+  .alojamiento {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .alojamiento img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .alojamiento h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .alojamiento p {
+    color: #666;
+  }
+  
+  .alojamiento a {
+    color: #4cafa0;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .alojamiento a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo del footer */
+  footer {
     background-color: #333;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 30px 0;
-}
+  }
+  
+  footer nav ul {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  footer nav ul li {
+    margin: 0 10px;
+  }
+  
+  footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  
