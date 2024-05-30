@@ -24,6 +24,8 @@ npm run dev
 
 ## Endpoints
 
+## TIPOS DE ALOJAMIENTOS
+
 - `POST /tiposAlojamiento/createTipoAlojamiento`: Crea un nuevo tipo de alojamiento.
   - Parámetros de la solicitud: `{ "Descripcion": "casa" }`
   - Respuesta exitosa: `200 OK`
@@ -45,6 +47,106 @@ npm run dev
 
 - `DELETE /tiposAlojamiento/deleteTipoAlojamiento/:id`: Elimina un tipo de alojamiento existente.
   - Parámetros de la solicitud: `ID del tipo de alojamiento`
+  - Respuesta exitosa: `204 No Content`
+
+## ALOJAMIENTOS
+
+ Envía solicitudes HTTP a los endpoints correspondientes para realizar operaciones CRUD en los alojamientos.
+
+- `POST /alojamiento/createAlojamiento`: Crea un nuevo alojamiento.
+  - Parámetros de la solicitud: 
+    ```json
+    {
+        "Titulo": "Ejemplo de alojamiento",
+        "Descripción": "Descripción del alojamiento",
+        "TipoAlojamiento": 1,
+        "Latitud": 123.456,
+        "Longitud": -78.901,
+        "Precio por día": 100,
+        "Cantidad de dormitorios": 3,
+        "Cantidad de baños": 2,
+        "Estado": "Disponible"
+    }
+    ```
+  - Respuesta exitosa: `200 OK`
+  - Ejemplo de respuesta: 
+    ```json
+    {
+        "idAlojamiento": 1,
+        "Titulo": "Ejemplo de alojamiento",
+        "Descripción": "Descripción del alojamiento",
+        "TipoAlojamiento": 1,
+        "Latitud": 123.456,
+        "Longitud": -78.901,
+        "Precio por día": 100,
+        "Cantidad de dormitorios": 3,
+        "Cantidad de baños": 2,
+        "Estado": "Disponible"
+    }
+    ```
+
+- `GET /alojamiento/getAlojamiento/:id`: Obtiene un alojamiento por su ID.
+  - Parámetros de la solicitud: `ID del alojamiento`
+  - Respuesta exitosa: `200 OK`
+  - Ejemplo de respuesta: 
+    ```json
+    {
+        "idAlojamiento": 1,
+        "Titulo": "Ejemplo de alojamiento",
+        "Descripción": "Descripción del alojamiento",
+        "TipoAlojamiento": 1,
+        "Latitud": 123.456,
+        "Longitud": -78.901,
+        "Precio por día": 100,
+        "Cantidad de dormitorios": 3,
+        "Cantidad de baños": 2,
+        "Estado": "Disponible"
+    }
+    ```
+- `GET /alojamiento/getAlojamiento`: Obtiene todos los alojamientos.
+  - Respuesta exitosa: `200 OK`
+  - Ejemplo de respuesta: 
+    ```json
+    {
+        "idAlojamiento": 1,
+        "Titulo": "Ejemplo de alojamiento",
+        "Descripción": "Descripción del alojamiento",
+        "TipoAlojamiento": 1,
+        "Latitud": 123.456,
+        "Longitud": -78.901,
+        "Precio por día": 100,
+        "Cantidad de dormitorios": 3,
+        "Cantidad de baños": 2,
+        "Estado": "Disponible"
+    },
+    {
+        "idAlojamiento": 2,
+        "Titulo": "Ejemplo de alojamiento",
+        "Descripción": "Descripción del alojamiento",
+        "TipoAlojamiento": 2,
+        "Latitud": 123.456,
+        "Longitud": -78.901,
+        "Precio por día": 100,
+        "Cantidad de dormitorios": 3,
+        "Cantidad de baños": 2,
+        "Estado": "Disponible"
+    }
+    ```
+    
+- `PUT /alojamiento/putAlojamiento/:id`: Actualiza un alojamiento existente.
+  - Parámetros de la solicitud: `ID del alojamiento`, datos a actualizar
+  - Respuesta exitosa: `200 OK`
+  - Ejemplo de solicitud: `PUT /alojamientos/updateAlojamiento/1` con cuerpo:
+    ```json
+    {
+        "Titulo": "Nuevo título",
+        "Precio por día": 120,
+        "Estado": "Reservado"
+    }
+    ```
+
+- `DELETE /alojamiento/deleteAlojamiento/:id`: Elimina un alojamiento existente.
+  - Parámetros de la solicitud: `ID del alojamiento`
   - Respuesta exitosa: `204 No Content`
 
 
